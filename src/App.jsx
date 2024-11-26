@@ -4,6 +4,7 @@ import './App.css'
 import HomePage from "./pages/HomePage";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
+import GetStarted from "./pages/GetStarted";
 
 
 export default function App() {
@@ -41,6 +42,7 @@ export default function App() {
         </div>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/GetStarted" element={<GetStarted /> } />
         </Routes>
         <Footer />
       </BrowserRouter>

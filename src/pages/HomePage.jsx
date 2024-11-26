@@ -3,6 +3,27 @@ import DefaultBtn from '../components/Buttons/DefaultBtn'
 import { BsGithub, BsLinkedin } from 'react-icons/bs'
 
 const HomePage = () => {
+    const project = [
+        {
+            id:1,
+            name: 'NPM Package for JKCSS',
+            desc: 'Support using Node Package Manager. Now JKCSS has NPM Package for Development',
+            link: '',
+        },
+        {
+            id:2,
+            name: 'ReactJKCSS',
+            desc: 'Successfully works with ReactJS, After April 2024 JKCSS successfully launched the React Version of JKCSS',
+            link: '',
+        },
+        {
+            id:3,
+            name: 'ReactJKIcons',
+            desc: 'Icon Framework for JKCSS work with only ReactJS',
+            link: '',
+        },
+    ]
+
   return (
     <div>
         <div className="my-40 ">
@@ -87,6 +108,31 @@ const HomePage = () => {
 
                 <h1 className="text-center mt-16 text-2xl font-semibold text-gray-800">On-Going Projects with JKCSS</h1>
                 <p className="text-center">Project that combine with JKCSS</p>
+
+
+                <div className="md:grid grid-cols-3 gap-4 my-6">
+                    {
+                        project.map((data, index) => {
+                            return (
+                                <div className="border border-gray-500/30 p-6 rounded-md md:my-0 my-4">
+                                    <h1 className="font-semibold text-xl text-purple-800 pb-2 text-center">{data.name}</h1>
+                                    <p className="">
+                                        {data.desc}
+                                    </p>
+
+                                    <center>
+                                        <a href={data.link}>
+                                            <div className="mt-4">
+                                                <DefaultBtn BtnType={'button'} btnValue={'Read More'} />
+                                            </div>
+                                        </a>
+                                    </center>
+                                </div>
+                            )
+                        })
+                    }
+                </div>
+
 
                 <h1 className="text-center mt-16 text-2xl font-semibold text-gray-800">Development Team</h1>
                 <p className="text-center"></p>
