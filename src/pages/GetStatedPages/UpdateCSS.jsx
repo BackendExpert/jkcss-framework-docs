@@ -58,6 +58,10 @@ const UpdateCSS = () => {
                         <span className="tag">&lt;/html&gt;</span><br />
                     </code>
                 </pre>
+
+                <button onClick={copyToClipboard} className="bg-purple-800 px-4 py-2 my-2 rounded text-white">
+                    {copied ? 'Copied!' : 'Copy Code'}
+                </button>
             </div>
 
         </div>

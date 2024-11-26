@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import FileName from '../components/Text/FileName'
 import './CodeBlock.css';
+import BaseFile from './GetStatedPages/BaseFile';
+import UpdateCSS from './GetStatedPages/UpdateCSS';
 
 const GetStarted = () => {
     const [copied, setCopied] = useState(false);
@@ -36,11 +38,8 @@ const GetStarted = () => {
                 JKCSS CSS - Framework is underdeveloping. This Framework only contains CDN (Content Delivery Network or Content Distribution Network) and Downloaded CSS will be in future versions. JKCSS CSS - Framework still Developing with CSS and Javascript. 
             </p>            
         </div>
-
-
-
-
-
+        <BaseFile />
+        <UpdateCSS />
 
 
     </div>
