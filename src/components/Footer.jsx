@@ -5,12 +5,12 @@ const Footer = () => {
     const currentYear = new Date().getFullYear();
 
     const release = [
-        {id: 1, name: '6.0.0 05 May 2024', link: ''},
-        {id: 2, name: '5.1.0 08 March 2024', link: ''},
-        {id: 3, name: '5.0.0 25 February 2024', link: ''},
-        {id: 4, name: '5.0.0-beta2 24 February 2024', link: ''},
-        {id: 5, name: '5.0.0-beta1 22 February 2024', link: ''},
-        {id: 6, name: '4.5.0 12 February 2024', link: ''},
+        {id: 1, name: '6.0.0 05 May 2024', link: 'https://github.com/JKCSS-CSS-Framework/JKCSS-Framework/releases'},
+        {id: 2, name: '5.1.0 08 March 2024', link: 'https://github.com/JKCSS-CSS-Framework/JKCSS-Framework/releases'},
+        {id: 3, name: '5.0.0 25 February 2024', link: 'https://github.com/JKCSS-CSS-Framework/JKCSS-Framework/releases'},
+        {id: 4, name: '5.0.0-beta2 24 February 2024', link: 'https://github.com/JKCSS-CSS-Framework/JKCSS-Framework/releases'},
+        {id: 5, name: '5.0.0-beta1 22 February 2024', link: 'https://github.com/JKCSS-CSS-Framework/JKCSS-Framework/releases'},
+        {id: 6, name: '4.5.0 12 February 2024', link: 'https://github.com/JKCSS-CSS-Framework/JKCSS-Framework/releases'},
     ]
 
     const Project = [

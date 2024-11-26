@@ -9,8 +9,7 @@ const NavBar = () => {
         { id: 2, name: 'Get started', link: '/GetStarted' },
         { id: 3, name: 'Docs', link: '' },
         { id: 4, name: 'Utility-First', link: '' },
-        { id: 5, name: 'releases', link: '' },
-        { id: 6, name: 'Projects', link: '' },
+        { id: 5, name: 'Projects', link: '' },
     ];
 
     const toggleMobileMenu = () => {
