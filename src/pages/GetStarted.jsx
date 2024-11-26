@@ -43,61 +43,67 @@ const GetStarted = () => {
 
         <div className="">
             <h1 className="mb-4 text-2xl font-semibold">CDN Information</h1>
-            <table className='w-full border border-gray-500/20'>
-                <thead className='h-12 bg-gray-500/10 rounded'>
-                    <tr>
-                        <th className='font-semibold border-r'>Description</th>
-                        <th className='font-semibold'>Links</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td className='h-12 border-r text-center font-semibold text-purple-800'>
-                            CSS
-                        </td>
-                        <td className='h-12 pl-4 text-red-800'>
-                            https://jkcss-css-framework.github.io/JKCSS-Framework/jkcss/jkcss.min.css
-                        </td>
-                    </tr>
-                    <tr>
-                        <td className='h-12 border-r text-center font-semibold text-purple-800'>
-                            Js
-                        </td>
-                        <td className='h-12 pl-4 text-red-800'>
-                            https://jkcss-css-framework.github.io/JKCSS-Framework/js/jkcss.min.js
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <div className="overflow-x-auto">
+    <table className='w-full border border-gray-500/20'>
+        <thead className='h-12 bg-gray-500/10 rounded'>
+            <tr>
+                <th className='font-semibold border-r'>Description</th>
+                <th className='font-semibold'>Links</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td className='h-12 border-r text-center font-semibold text-purple-800'>
+                    CSS
+                </td>
+                <td className='h-12 pl-4 text-red-800'>
+                    https://jkcss-css-framework.github.io/JKCSS-Framework/jkcss/jkcss.min.css
+                </td>
+            </tr>
+            <tr>
+                <td className='h-12 border-r text-center font-semibold text-purple-800'>
+                    Js
+                </td>
+                <td className='h-12 pl-4 text-red-800'>
+                    https://jkcss-css-framework.github.io/JKCSS-Framework/js/jkcss.min.js
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
-            <h1 className="mt-8 mb-2">Recommended use</h1>
+<h1 className="mt-8 mb-2">Recommended use</h1>
 
-            <table className='w-full border border-gray-500/20 '>
-                <thead className='h-12 bg-gray-500/10 rounded'>
-                    <tr>
-                        <th className='font-semibold border-r'>Description</th>
-                        <th className='font-semibold'>Links</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td className='h-12 border-r text-center font-semibold text-purple-800'>
-                            CSS
-                        </td>
-                        <td className='h-12 pl-4 text-red-800'>
-                            https://cdn.jsdelivr.net/npm/@jehankandy/jkcss@6.0.0/src/jkcss.min.css
-                        </td>
-                    </tr>
-                    <tr>
-                        <td className='h-12 border-r text-center font-semibold text-purple-800'>
-                            Js
-                        </td>
-                        <td className='h-12 pl-4 text-red-800'>
-                            https://cdn.jsdelivr.net/npm/@jehankandy/jkcss@6.0.0/js/jkcss.min.js
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+<div className="overflow-x-auto">
+    <table className='w-full border border-gray-500/20'>
+        <thead className='h-12 bg-gray-500/10 rounded'>
+            <tr>
+                <th className='font-semibold border-r'>Description</th>
+                <th className='font-semibold'>Links</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td className='h-12 border-r text-center font-semibold text-purple-800'>
+                    CSS
+                </td>
+                <td className='h-12 pl-4 text-red-800'>
+                    https://cdn.jsdelivr.net/npm/@jehankandy/jkcss@6.0.0/src/jkcss.min.css
+                </td>
+            </tr>
+            <tr>
+                <td className='h-12 border-r text-center font-semibold text-purple-800'>
+                    Js
+                </td>
+                <td className='h-12 pl-4 text-red-800'>
+                    https://cdn.jsdelivr.net/npm/@jehankandy/jkcss@6.0.0/js/jkcss.min.js
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
         </div>
 
 
