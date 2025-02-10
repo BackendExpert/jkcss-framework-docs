@@ -2,6 +2,7 @@ import React from 'react'
 import Npmcode from '../../../components/NPMcode/Npmcode'
 import FileName from '../../../components/Text/FileName'
 import ButtonVariants from './ButtonVariants'
+import ButtonOutLine from './ButtonOutLine'
 
 const ButtonMain = () => {
   return (
@@ -43,6 +44,19 @@ const ButtonMain = () => {
             <div className="py-4">
                 <ButtonVariants />
             </div>
+
+            <h1 className="text-purple-500 uppercase font-semibold text-xl py-2">Button OutLine</h1>
+
+            <p className="py-0">Different styles can be applied using predefined classes:</p>
+
+            <div className="py-4">
+                <ButtonOutLine />
+            </div>
+
+
+            <h1 className="text-purple-500 uppercase font-semibold text-xl py-2">Disabled state All Buttons</h1>
+
+            <p className="py-0">JKCSS support for button status as : <FileName FName={'Disabled'}/> </p>
         </div>
 
     </div>
