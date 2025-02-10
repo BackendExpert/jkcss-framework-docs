@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import GetStarted from "./pages/GetStarted";
 import Docs from "./components/Docs/Docs";
 import DocsHome from "./pages/Docs/DocsHome";
+import ButtonMain from "./pages/Docs/Button/ButtonMain";
 
 
 export default function App() {
@@ -47,6 +48,7 @@ export default function App() {
           <Route path="/GetStarted" element={<GetStarted /> } />
           <Route path="/Docs/" element={<Docs /> } >
             <Route path="AllDocs" element={<DocsHome /> } />
+            <Route path="Button" element={<ButtonMain /> } />
           </Route>
         </Routes>
         <Footer />

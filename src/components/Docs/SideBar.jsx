@@ -1,8 +1,9 @@
 import React from 'react'
+import { FaRegFileCode } from "react-icons/fa";
 
 const SideBar = () => {
     const docsdata = [
-        { id: 1, name: 'Buttons', link: '#' },
+        { id: 1, name: 'Buttons', link: 'Button' },
         { id: 2, name: 'Modals', link: '#' },
         { id: 3, name: 'Forms', link: '#' },
         { id: 4, name: 'Cards', link: '#' },
@@ -20,13 +21,16 @@ const SideBar = () => {
         { id: 2, name: 'Spacing', link: '#' },
     ]
   return (
-    <div>
-        <div className="py-4">
-            <p className="">About Docs</p>
-        </div>
+    <div className='border-r border-gray-200'>
+        <a href="/Docs/AllDocs">
+            <div className="py-4 flex">
+                <FaRegFileCode className='h-8 w-auto fill-purple-500'/>
+                <p className="text-xl pl-2 text-purple-500">About Docs</p>
+            </div>
+        </a>
         <hr />
         <div className="py-4">
-            <h1 className="text-2xl font-semibold uppercase text-purple-700">Docs</h1>
+            <h1 className="text-2xl font-semibold uppercase text-purple-700">Components</h1>
 
             <div className="pl-4">
                 {

@@ -9,7 +9,7 @@ const Docs = () => {
             <div className="w-1/5">
                 <SideBar />
             </div>
-            <div className="w-full">
+            <div className="w-full px-4">
                 <Outlet />
             </div>
         </div>
