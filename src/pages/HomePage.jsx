@@ -114,7 +114,7 @@ const HomePage = () => {
                     {
                         project.map((data, index) => {
                             return (
-                                <div className="border border-gray-500/30 p-6 rounded-md md:my-0 my-4">
+                                <div className="border border-gray-500/30 p-6 rounded-md md:my-0 my-4" key={index}>
                                     <h1 className="font-semibold text-xl text-purple-800 pb-2 text-center">{data.name}</h1>
                                     <p className="">
                                         {data.desc}
@@ -139,8 +139,7 @@ const HomePage = () => {
 
                 <center className='my-4'>
                     <div className="">
-                        <div className="md:grid grid-cols-3 gap-4">
-                            <div className=""></div>
+                        <div className="md:grid grid-cols-2 gap-4">
                             <div className="border border-gray-500/30 py-8 rounded-md shadow-md">
                                 <img src="https://avatars.githubusercontent.com/u/138636749?v=4&size=64" alt="" className='rounded-full'/>
                                 <h1 className="text-xl font-semibold text-purple-800">Jehan Weerasuriya</h1>
@@ -155,7 +154,20 @@ const HomePage = () => {
                                     </h1>
                                 </div>
                             </div>
-                            <div className=""></div>
+                            <div className="border border-gray-500/30 py-8 rounded-md shadow-md">
+                                <img src="https://media.licdn.com/dms/image/v2/D5603AQHMjfiybgoStw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1708108306491?e=1744848000&v=beta&t=ciXgDWKDDapy-v9kJIS9x20u9HA5DJdSmn0WOFoVMjA" alt="" className='h-20 rounded-full'/>
+                                <h1 className="text-xl font-semibold text-purple-800">Anupa Gamage</h1>
+                                <p className="">Developer</p>
+
+                                <div className="md:mx-16 mx-4 my-4">
+                                    <h1 className="flex my-2">
+                                        <p className=""><BsGithub className='h-6 w-auto fill-purple-800'/> </p> <p className="pl-4"><a href="https://github.com/Anupa1998" target="_blank">github.com/Anupa1998</a></p>
+                                    </h1>
+                                    <h1 className="flex my-2">
+                                        <p className=""><BsLinkedin className='h-6 w-auto fill-purple-800'/> </p> <p className="pl-4"><a href="https://www.linkedin.com/in/anupa-gamage-890a09265/" target='_blank'>linkedin.com/anupagamage</a></p>
+                                    </h1>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </center>
