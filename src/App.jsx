@@ -5,6 +5,8 @@ import HomePage from "./pages/HomePage";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import GetStarted from "./pages/GetStarted";
+import Docs from "./components/Docs/Docs";
+import DocsHome from "./pages/Docs/DocsHome";
 
 
 export default function App() {
@@ -43,6 +45,9 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/GetStarted" element={<GetStarted /> } />
+          <Route path="/Docs/" element={<Docs /> } >
+            <Route path="AllDocs" element={<DocsHome /> } />
+          </Route>
         </Routes>
         <Footer />
       </BrowserRouter>
