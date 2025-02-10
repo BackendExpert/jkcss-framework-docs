@@ -1,5 +1,6 @@
 import React from 'react'
 import Npmcode from '../../../components/NPMcode/Npmcode'
+import FileName from '../../../components/Text/FileName'
 
 const ButtonMain = () => {
   return (
@@ -28,7 +29,15 @@ const ButtonMain = () => {
         <div className="py-4 text-gray-500">
             <h1 className="text-purple-500 uppercase font-semibold text-xl">Usage</h1>
 
-            <p className="py-2">Use the .btn class to create a basic button:</p>
+            <p className="py-2">Use the <FileName FName={'.jkbtn'}/> class to create a basic button:</p>
+
+            <div className="py-4">
+                <Npmcode npmcode={'<button class="btn">Click Me</button>'}/>
+            </div>
+
+            <h1 className="text-purple-500 uppercase font-semibold text-xl py-2">Button Variants</h1>
+
+            <p className="py-0">Different styles can be applied using predefined classes:</p>
         </div>
 
     </div>
