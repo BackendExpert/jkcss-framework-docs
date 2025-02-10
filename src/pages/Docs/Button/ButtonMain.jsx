@@ -1,6 +1,7 @@
 import React from 'react'
 import Npmcode from '../../../components/NPMcode/Npmcode'
 import FileName from '../../../components/Text/FileName'
+import ButtonVariants from './ButtonVariants'
 
 const ButtonMain = () => {
   return (
@@ -38,6 +39,10 @@ const ButtonMain = () => {
             <h1 className="text-purple-500 uppercase font-semibold text-xl py-2">Button Variants</h1>
 
             <p className="py-0">Different styles can be applied using predefined classes:</p>
+
+            <div className="py-4">
+                <ButtonVariants />
+            </div>
         </div>
 
     </div>
