@@ -3,6 +3,9 @@ import Npmcode from '../../../components/NPMcode/Npmcode'
 import FileName from '../../../components/Text/FileName'
 import ButtonVariants from './ButtonVariants'
 import ButtonOutLine from './ButtonOutLine'
+import ButtonDisabled from './ButtonDisabled'
+import ButtonSizes from './ButtonSizes'
+import ButtonGroups from './ButtonGroups'
 
 const ButtonMain = () => {
   return (
@@ -57,6 +60,31 @@ const ButtonMain = () => {
             <h1 className="text-purple-500 uppercase font-semibold text-xl py-2">Disabled state All Buttons</h1>
 
             <p className="py-0">JKCSS support for button status as : <FileName FName={'Disabled'}/> </p>
+
+            <div className="py-4">
+                <ButtonDisabled />
+            </div>
+
+
+            <h1 className="text-purple-500 uppercase font-semibold text-xl py-2">Button Sizes</h1>
+
+            <p className="py-0">The JKCSS include small buttons also <FileName FName={'.jkbtn-sm'} /> and large buttons <FileName FName={'.jkbtn-lg'} /></p>
+
+            <div className="py-4">
+                <ButtonSizes />
+            </div>
+
+
+            <h1 className="text-purple-500 uppercase font-semibold text-xl py-2">Button Groups</h1>
+
+            <p className="py-0">This is the button group of JKCSS <FileName FName={'.btn-group'} /> is the base class of the button group
+                                And you can use any button color style with <FileName FName={'.btn-group'} /> like following.</p>
+
+            <div className="py-4">
+                <ButtonGroups />
+            </div>
+
+            <p className="">In this <FileName FName={'.btn-group'} /> can use with outline buttons and more</p>
         </div>
 
     </div>
