@@ -24,9 +24,6 @@ const Documentation = () => {
                     <div className="ml-0 pl-8 pr-4 py-4 bg-white">
                         <Outlet />
                     </div>
-                    <div className="xl:ml-0">
-                        <Footer />
-                    </div>
                 </div>
             </div>
         </div>

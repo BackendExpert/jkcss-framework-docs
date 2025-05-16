@@ -4,6 +4,7 @@ import './App.css';
 import HomePage from "./pages/HomePage";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
+import DocsFooter from "./components/DocsFooter";
 import GetStarted from "./pages/GetStarted";
 import Docs from "./components/Docs/Docs";
 import DocsHome from "./pages/Docs/DocsHome";
@@ -17,26 +18,21 @@ function ScrollHandler() {
 
   const handleScroll = () => {
     const currentScrollY = window.scrollY;
-
     if (currentScrollY > lastScrollY && currentScrollY > 50) {
       setShowNavBar(false);
     } else {
       setShowNavBar(true);
     }
-
     setLastScrollY(currentScrollY);
   };
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
-  // Hide Footer on /Documentation and its children paths
-  const hideFooter = location.pathname === "/Documentation" || location.pathname.startsWith("/Documentation/");
+  // Check if current path is /Documentation or starts with /Documentation/
+  const isDocumentationPath = location.pathname === "/Documentation" || location.pathname.startsWith("/Documentation/");
 
   return (
     <>
@@ -51,12 +47,13 @@ function ScrollHandler() {
           <Route path="AllDocs" element={<DocsHome />} />
           <Route path="Button" element={<ButtonMain />} />
         </Route>
-        <Route path="/Documentation" element={<Documentation />} >
+        <Route path="/Documentation" element={<Documentation />}>
           <Route path="Button" element={<ButtonMain />} />
         </Route>
       </Routes>
 
-      {!hideFooter && <Footer />}
+      {/* Show Footer or DocsFooter depending on route */}
+      {isDocumentationPath ? <DocsFooter /> : <Footer />}
     </>
   );
 }
