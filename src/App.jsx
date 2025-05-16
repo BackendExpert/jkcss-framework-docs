@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import './App.css'
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import './App.css';
 import HomePage from "./pages/HomePage";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
@@ -10,19 +10,17 @@ import DocsHome from "./pages/Docs/DocsHome";
 import ButtonMain from "./pages/Docs/Button/ButtonMain";
 import Documentation from "./pages/Docs/Documentation/Documentation";
 
-
-export default function App() {
+function ScrollHandler() {
   const [showNavBar, setShowNavBar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const location = useLocation();
 
   const handleScroll = () => {
     const currentScrollY = window.scrollY;
 
     if (currentScrollY > lastScrollY && currentScrollY > 50) {
-      // If scrolling down and past a certain threshold, hide the NavBar
       setShowNavBar(false);
     } else {
-      // If scrolling up, show the NavBar
       setShowNavBar(true);
     }
 
@@ -32,31 +30,41 @@ export default function App() {
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
 
-    // Cleanup the event listener on component unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [lastScrollY]);
 
+  // Hide Footer on /Documentation and its children paths
+  const hideFooter = location.pathname === "/Documentation" || location.pathname.startsWith("/Documentation/");
+
   return (
-    <div className="">
-      <BrowserRouter>
-        <div className={`fixed top-0 w-full z-50 transition-transform duration-300 ${showNavBar ? "translate-y-0" : "-translate-y-full"}`}>
-          <NavBar />
-        </div>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/GetStarted" element={<GetStarted /> } />
-          <Route path="/Docs/" element={<Docs /> } >
-            <Route path="AllDocs" element={<DocsHome /> } />
-            <Route path="Button" element={<ButtonMain /> } />
-          </Route>
-          <Route path="/Documentation" element={<Documentation /> } >
-          
-          </Route>
-        </Routes>
-        <Footer />
-      </BrowserRouter>
-    </div>
+    <>
+      <div className={`fixed top-0 w-full z-50 transition-transform duration-300 ${showNavBar ? "translate-y-0" : "-translate-y-full"}`}>
+        <NavBar />
+      </div>
+
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/GetStarted" element={<GetStarted />} />
+        <Route path="/Docs" element={<Docs />}>
+          <Route path="AllDocs" element={<DocsHome />} />
+          <Route path="Button" element={<ButtonMain />} />
+        </Route>
+        <Route path="/Documentation" element={<Documentation />} >
+          <Route path="Button" element={<ButtonMain />} />
+        </Route>
+      </Routes>
+
+      {!hideFooter && <Footer />}
+    </>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <ScrollHandler />
+    </BrowserRouter>
   );
 }
