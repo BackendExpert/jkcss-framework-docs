@@ -6,10 +6,10 @@ import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import DocsFooter from "./components/DocsFooter";
 import GetStarted from "./pages/GetStarted";
-import Docs from "./components/Docs/Docs";
 import DocsHome from "./pages/Docs/DocsHome";
 import ButtonMain from "./pages/Docs/Button/ButtonMain";
 import Documentation from "./pages/Docs/Documentation/Documentation";
+import Popups from "./pages/Docs/ModelsPopups/Popups";
 
 function ScrollHandler() {
   const [showNavBar, setShowNavBar] = useState(true);
@@ -43,12 +43,10 @@ function ScrollHandler() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/GetStarted" element={<GetStarted />} />
-        <Route path="/Docs" element={<Docs />}>
+        <Route path="/Documentation" element={<Documentation />}>
           <Route path="AllDocs" element={<DocsHome />} />
           <Route path="Button" element={<ButtonMain />} />
-        </Route>
-        <Route path="/Documentation" element={<Documentation />}>
-          <Route path="Button" element={<ButtonMain />} />
+          <Route path="Models" element={<Popups /> } />
         </Route>
       </Routes>
 
