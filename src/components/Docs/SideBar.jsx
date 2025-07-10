@@ -22,14 +22,16 @@ const SideBar = () => {
     ];
 
     const Section = ({ title, items }) => (
-        <div className="py-4">
-            <h2 className="text-lg font-bold uppercase text-purple-700 mb-2 tracking-wider">{title}</h2>
-            <ul className="pl-2 space-y-1">
+        <div className="mb-8">
+            <h3 className="text-xs font-semibold text-purple-300 uppercase mb-4 tracking-widest">
+                {title}
+            </h3>
+            <ul className="space-y-2">
                 {items.map((item) => (
                     <li key={item.id}>
                         <a
                             href={item.link}
-                            className="block text-sm text-purple-600 hover:pl-2 transition-all duration-300 hover:text-purple-800"
+                            className="block px-4 py-2 rounded-lg text-white text-sm font-medium transition-transform transform hover:scale-105 hover:bg-purple-700 hover:shadow-lg"
                         >
                             {item.name}
                         </a>
@@ -40,15 +42,26 @@ const SideBar = () => {
     );
 
     return (
-        <aside className="min-h-screen w-full max-w-xs px-4 py-6 border-r border-gray-200 bg-white shadow-sm">
-            <a href="/Docs/AllDocs" className="flex items-center space-x-2 mb-6">
-                <FaRegFileCode className="text-2xl text-purple-600" />
-                <span className="text-xl font-semibold text-purple-600">About Docs</span>
+        <aside className="sticky top-0 h-screen w-72 bg-gradient-to-b from-purple-900 via-purple-800 to-purple-700 shadow-2xl rounded-r-3xl p-8 flex flex-col">
+            <a
+                href="/Docs/AllDocs"
+                className="flex items-center space-x-3 mb-12 select-none hover:scale-110 transition-transform duration-300"
+            >
+                <FaRegFileCode className="text-4xl text-purple-300 drop-shadow-lg" />
+                <span className="text-3xl font-extrabold text-white tracking-wide drop-shadow-md">
+                    About Docs asdasd
+                </span>
             </a>
-            <hr className="border-gray-300 mb-4" />
-            <Section title="Components" items={docsdata} />
-            <Section title="Content" items={contentdata} />
-            <Section title="Layout" items={layoutsData} />
+
+            <nav className="flex-grow overflow-y-auto pr-2">
+                <Section title="Components" items={docsdata} />
+                <Section title="Content" items={contentdata} />
+                <Section title="Layout" items={layoutsData} />
+            </nav>
+
+            <footer className="text-center text-purple-400 text-xs mt-auto select-none">
+                &copy; {new Date().getFullYear()} Your Company
+            </footer>
         </aside>
     );
 };
