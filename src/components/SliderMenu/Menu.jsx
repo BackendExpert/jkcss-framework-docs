@@ -81,7 +81,7 @@ const Menu = () => {
             </nav>
 
             <footer className="text-center text-purple-400 text-xs mt-auto select-none">
-                &copy; {new Date().getFullYear()} Your Company
+                &copy; {new Date().getFullYear()} <a href="https://www.blackalphalabs.com/" target='_blank'>blackalphalabs</a>
             </footer>
         </aside>
     );
